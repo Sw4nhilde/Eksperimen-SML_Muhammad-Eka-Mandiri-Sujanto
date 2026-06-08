@@ -16,9 +16,7 @@ from sklearn.preprocessing import (
 
 def preprocess():
 
-    df = pd.read_csv(
-        "/content/WA_Fn-UseC_-Telco-Customer-Churn.csv"
-    )
+    df = pd.read_csv('Telco Customer Churn_raw/WA_Fn-UseC_-Telco-Customer-Churn.csv')
 
     df.drop(
         columns=["customerID"],
