@@ -1,0 +1,29 @@
+name: Preprocessing
+
+on:
+  push:
+
+jobs:
+
+  preprocess:
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+
+      - name: Install dependencies
+        run: |
+          pip install pandas
+          pip install scikit-learn
+
+      - name: Run preprocessing script
+        run: |
+          python preprocessing/automate_Eka.py
