@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1yx2NykQKoCmZvzRQmeP7tpJtgQZcJW8N
 """
 
-pip install pandas seaborn scikit-learn
-
 import pandas as pd
 
 from sklearn.preprocessing import (
